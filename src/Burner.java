@@ -72,7 +72,7 @@ public class Burner {
 	
 	public void updateTemperature() {
 		// adjust the temperature of each burner up or down a setting until set point reached
-		timer--;
+		--timer;
 		if (timer == 0) {
 			switch (mySetting) {
 			case HIGH:
@@ -100,6 +100,8 @@ public class Burner {
 				}
 				break;
 			}
+			// reset timer after updating temp
+			timer = 2;
 		}
 		
 	}
