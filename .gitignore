@@ -1,5 +1,6 @@
 .settings
-bin/*
 .project
+.gitignore
 .classpath
-/bin/
+bin/
+gitlog.txt

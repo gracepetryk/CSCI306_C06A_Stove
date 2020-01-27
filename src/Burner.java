@@ -1,6 +1,6 @@
 
 public class Burner {
-	private enum Temperature {
+	public enum Temperature {
 		COLD(0),
 		WARM(1),
 		HOT(2),
@@ -95,13 +95,13 @@ public class Burner {
 				}
 				break;
 			case OFF:
-				if (myTemperature.getTemp() > Temperature.WARM.getTemp()) {
+				if (myTemperature.getTemp() > Temperature.COLD.getTemp()) {
 					decreaseTemperature();
 				}
 				break;
 			}
-			// reset timer after updating temp
-			timer = 2;
+			// reset timer
+			timer = TIME_DURATION;
 		}
 		
 	}
